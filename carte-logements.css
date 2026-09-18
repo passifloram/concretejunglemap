@@ -1,0 +1,28 @@
+/* Styles limités à la carte du registre. */
+.cj-housing-map{--hm-bg:var(--neutral,#f8f6f2);--hm-text:var(--textColor,#29282c);--hm-accent:var(--accentClr,#b9632c);position:relative;box-sizing:border-box;max-width:100%;margin:20px 0;padding:20px;border:1px solid var(--contrastLighter,#aaa);border-radius:16px;background:var(--hm-bg);color:var(--hm-text);text-align:left;font:14px/1.5 var(--font,Arial,sans-serif)}
+.cj-housing-map *{box-sizing:border-box}
+.cj-housing-map .cjhm-title{margin:0;font:26px/1.2 var(--font-title,Georgia,serif);color:var(--hm-text)}
+.cj-housing-map .cjhm-hint,.cj-housing-map .cjhm-note{margin:8px 0 16px;line-height:1.5}
+.cj-housing-map .cjhm-note{font-size:12px;margin:14px 0 0;opacity:.8}
+.cj-housing-map .cjhm-controls{display:flex;flex-wrap:wrap;gap:8px}
+.cj-housing-map .cjhm-controls input,.cj-housing-map .cjhm-controls select,.cj-housing-map button{font:inherit;color:var(--hm-text);background:var(--neutralTwo,#eae7e2);border:1px solid var(--contrastLighter,#aaa);border-radius:8px;min-height:38px;padding:7px 10px;margin:0}
+.cj-housing-map .cjhm-controls input{flex:1 1 210px;min-width:0;width:auto}
+.cj-housing-map .cjhm-controls select{flex:1 1 180px;min-width:0;max-width:100%}
+.cj-housing-map button{cursor:pointer;text-transform:none;letter-spacing:normal;box-shadow:none}
+.cj-housing-map button:disabled{opacity:.4;cursor:default}
+.cj-housing-map :focus-visible{outline:3px solid var(--hm-accent);outline-offset:3px}
+.cj-housing-map .cjhm-count{margin:12px 0;font-size:12px;font-weight:600}
+.cj-housing-map .cjhm-viewport{height:430px;max-height:65vh;width:100%;overflow:auto;position:relative;border-radius:12px;border:1px solid #b8b4ac;background:#fff;overscroll-behavior:contain;scrollbar-width:thin}
+.cj-housing-map .cjhm-stage{position:relative;flex-shrink:0}
+.cj-housing-map .cjhm-base{display:block!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:fill;border:0;border-radius:0;opacity:1!important;filter:none!important}
+.cj-housing-map .cjhm-pins{position:absolute;inset:0}
+.cj-housing-map .cjhm-pin{position:absolute;display:block;width:15px;height:15px;min-height:0;min-width:0;padding:0;border:2px solid #fff;border-radius:50% 50% 50% 0;background:var(--hm-accent);transform:translate(-50%,-100%) rotate(-45deg);box-shadow:0 1px 4px #0008;z-index:1}
+.cj-housing-map .cjhm-pin:hover,.cj-housing-map .cjhm-pin:focus,.cj-housing-map .cjhm-pin[aria-pressed=true]{z-index:3;background:var(--textColorAccent,#a94f7b);outline:2px solid var(--hm-accent);outline-offset:2px}
+.cj-housing-map [hidden]{display:none!important}
+.cj-housing-map .cjhm-tooltip{position:absolute;z-index:20;max-width:min(300px,calc(100% - 16px));padding:9px 12px;border-radius:8px;background:#171820;color:#fff;font:13px/1.4 Arial,sans-serif;box-shadow:0 4px 15px #0004;pointer-events:none}
+.cj-housing-map .cjhm-details{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;min-height:62px;margin:12px 0;padding:12px;border-left:3px solid var(--hm-accent);background:var(--neutralTwo,#eae7e2);border-radius:0 8px 8px 0}
+.cj-housing-map .cjhm-details a{color:var(--hm-accent);text-decoration:underline}
+.cj-housing-map .cjhm-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;max-height:230px;overflow:auto;padding:3px}
+.cj-housing-map .cjhm-person{display:flex;flex-direction:column;align-items:flex-start;text-align:left;line-height:1.4;white-space:normal}
+.cj-housing-map .cjhm-person span{font-size:11px;opacity:.8}
+@media(max-width:560px){.cj-housing-map{padding:12px}.cj-housing-map .cjhm-list{grid-template-columns:1fr}.cj-housing-map .cjhm-viewport{height:350px}.cj-housing-map .cjhm-title{font-size:23px}}
